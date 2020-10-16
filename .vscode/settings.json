@@ -1,2 +1,10 @@
 {
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "db",
+            "database": "/home/julio/Documentos/projetos/papersound/db.sqlite3"
+        }
+    ]
 }
