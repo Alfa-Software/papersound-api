@@ -36,3 +36,15 @@ class Curtida_comentario(models.Model):
     datetime = models.DateTimeField(default=timezone.now,blank=True)
     curtidor = models.ForeignKey(User , on_delete=models.CASCADE)
     comentario = models.ForeignKey(Comentario , on_delete=models.CASCADE)
+
+class Conversa(models.Model):
+    user1 = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user1")
+    user2 = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user2")
+    label = models.SlugField()
+
+class Mensagem(models.Model):
+    sender_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name="sender_id")
+    recipient_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name="recipient_id")
+    body = models.CharField(max_length=140)
+    timestamp = models.DateTimeField(default=timezone.now, blank=True)
+    conversa = models.ForeignKey(Conversa, on_delete=models.CASCADE)
