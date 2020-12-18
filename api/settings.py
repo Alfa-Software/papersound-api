@@ -27,7 +27,7 @@ SECRET_KEY = '9%y_*3)ry1c$@r9f8g_1w2d=aey2l^7mnvvmwyq)pqbbt%t3lw'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '192.168.0.107',
+    '192.168.0.108',
     'localhost',
     '127.0.0.1',
 ]
@@ -156,13 +156,13 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = "jn5.guape@gmail.com"
-EMAIL_HOST_PASSWORD = "sebastiao"
+EMAIL_HOST_USER = ""
+EMAIL_HOST_PASSWORD = ""
 
 
-AWS_ACCESS_KEY_ID = 'AKIATXGD6EAEW6SEJD6G'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'arquivospapersound'
+AWS_ACCESS_KEY_ID = ''
+AWS_SECRET_ACCESS_KEY = ''
+AWS_STORAGE_BUCKET_NAME = ''
 AWS_S3_CUSTOM_DOMAIN = '%s.s3-us-west-1.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
